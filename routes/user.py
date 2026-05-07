@@ -82,7 +82,7 @@ def add_carrito(producto_id):
 
 
 #Eliminar productos del carrito
-@user.route('/eliminar/<producto_id>', methods=['DELETE'])
+@user.route('/eliminar/<string:producto_id>', methods=['DELETE'])
 def eliminar_del_carrito(producto_id):
     """Elimina un producto del carrito"""
     session_id = session.get('session_id')
